@@ -16,4 +16,7 @@ func init() {
 	userDeleteCmd.Flags().Int("cnt", 1, "user total")
 	userDeleteCmd.Flags().String("token", "", "admin token")
 	userDeleteCmd.Flags().String("host", "", "apiserver address[eg: 192.168.1.1:8000]")
+
+	userDeleteCmd.MarkFlagRequired("token")
+	userDeleteCmd.MarkFlagRequired("host")
 }
